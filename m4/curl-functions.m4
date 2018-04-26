@@ -2124,6 +2124,9 @@ AC_DEFUN([CURL_CHECK_FUNC_GETADDRINFO], [
     ],[
       AC_MSG_RESULT([no])
       tst_works_getaddrinfo="no"
+    ],[
+      AC_MSG_RESULT([cross compiling, assuming no])
+      tst_works_getaddrinfo="no"
     ])
   fi
   #
@@ -3044,6 +3047,9 @@ AC_DEFUN([CURL_CHECK_FUNC_GETIFADDRS], [
     ],[
       AC_MSG_RESULT([no])
       tst_works_getifaddrs="no"
+    ],[
+      AC_MSG_RESULT([cross compiling, assuming no])
+      tst_works_getifaddrs="no"
     ])
   fi
   #
@@ -3422,6 +3428,9 @@ AC_DEFUN([CURL_CHECK_FUNC_GMTIME_R], [
     ],[
       AC_MSG_RESULT([no])
       tst_works_gmtime_r="no"
+    ],[
+      AC_MSG_RESULT([cross compiling, assuming no])
+      tst_works_gmtime_r="no"
     ])
   fi
   #
@@ -3705,6 +3714,9 @@ AC_DEFUN([CURL_CHECK_FUNC_INET_NTOP], [
     ],[
       AC_MSG_RESULT([no])
       tst_works_inet_ntop="no"
+    ],[
+      AC_MSG_RESULT([cross compiling, assuming no])
+      tst_works_inet_ntop="no"
     ])
   fi
   #
@@ -3856,6 +3868,9 @@ AC_DEFUN([CURL_CHECK_FUNC_INET_PTON], [
       tst_works_inet_pton="yes"
     ],[
       AC_MSG_RESULT([no])
+      tst_works_inet_pton="no"
+    ],[
+      AC_MSG_RESULT([cross compiling, assuming no])
       tst_works_inet_pton="no"
     ])
   fi
@@ -4583,6 +4598,9 @@ AC_DEFUN([CURL_CHECK_FUNC_LOCALTIME_R], [
     ],[
       AC_MSG_RESULT([no])
       tst_works_localtime_r="no"
+    ],[
+      AC_MSG_RESULT([cross compiling, assuming no])
+      tst_works_localtime_r="no"
     ])
   fi
   #
@@ -4833,6 +4851,9 @@ AC_DEFUN([CURL_CHECK_FUNC_POLL], [
       tst_works_poll="yes"
     ],[
       AC_MSG_RESULT([no])
+      tst_works_poll="no"
+    ],[
+      AC_MSG_RESULT([cross compiling, assuming no])
       tst_works_poll="no"
     ])
   fi
@@ -6204,6 +6225,9 @@ AC_DEFUN([CURL_CHECK_FUNC_STRERROR_R], [
     ],[
       AC_MSG_RESULT([no])
       tst_works_glibc_strerror_r="no"
+    ],[
+      AC_MSG_RESULT([cross compiling, assuming no])
+      tst_works_glibc_strerror_r="no"
     ])
   fi
   #
@@ -6264,6 +6288,9 @@ AC_DEFUN([CURL_CHECK_FUNC_STRERROR_R], [
       tst_works_posix_strerror_r="yes"
     ],[
       AC_MSG_RESULT([no])
+      tst_works_posix_strerror_r="no"
+    ],[
+      AC_MSG_RESULT([cross compiling, assuming no])
       tst_works_posix_strerror_r="no"
     ])
   fi

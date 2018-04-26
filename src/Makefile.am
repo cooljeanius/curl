@@ -86,7 +86,7 @@ endif
 CLEANFILES = tool_hugehelp.c
 # Use the C locale to ensure that only ASCII characters appear in the
 # embedded text.
-NROFF=env LC_ALL=C @NROFF@ @MANOPT@ # figured out by the configure script
+NROFF_BIN=env LC_ALL=C @NROFF_BIN@ @MANOPT@ # figured out by configure script
 
 EXTRA_DIST = mkhelp.pl makefile.dj Makefile.b32		\
  Makefile.m32 macos/curl.mcp.xml.sit.hqx macos/MACINSTALL.TXT		\
@@ -111,15 +111,15 @@ if HAVE_LIBZ
 $(HUGE): $(MANPAGE) $(README) $(MKHELP)
 	echo '#include "tool_setup.h"' > $(HUGE)
 	echo '#ifndef HAVE_LIBZ' >> $(HUGE)
-	$(NROFF) $(MANPAGE) | $(PERL) $(MKHELP) $(README) >> $(HUGE)
+	$(NROFF_BIN) $(MANPAGE) | $(PERL) $(MKHELP) $(README) >> $(HUGE)
 	echo '#else' >> $(HUGE)
-	$(NROFF) $(MANPAGE) | $(PERL) $(MKHELP) -c $(README) >> $(HUGE)
+	$(NROFF_BIN) $(MANPAGE) | $(PERL) $(MKHELP) -c $(README) >> $(HUGE)
 	echo '#endif /* HAVE_LIBZ */' >> $(HUGE)
 else # HAVE_LIBZ
 # This generates the tool_hugehelp.c file uncompressed only
 $(HUGE): $(MANPAGE) $(README) $(MKHELP)
 	echo '#include "tool_setup.h"' > $(HUGE)
-	$(NROFF) $(MANPAGE) | $(PERL) $(MKHELP) $(README) >> $(HUGE)
+	$(NROFF_BIN) $(MANPAGE) | $(PERL) $(MKHELP) $(README) >> $(HUGE)
 endif
 
 else # USE_MANUAL

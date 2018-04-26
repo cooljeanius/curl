@@ -3616,19 +3616,19 @@ AC_PATH_PROG( PERL, perl, ,
   $PATH:/usr/local/bin/perl:/usr/bin/:/usr/local/bin )
 AC_SUBST(PERL)
 
-AC_PATH_PROGS( NROFF, gnroff nroff, ,
-  $PATH:/usr/bin/:/usr/local/bin )
-AC_SUBST(NROFF)
+AC_PATH_PROGS([NROFF_BIN],[gnroff nroff],[],
+  [${PATH}:/usr/bin/:/usr/local/bin])
+AC_SUBST([NROFF_BIN])
 
-if test -n "$NROFF"; then
+if test -n "${NROFF_BIN}"; then
   dnl only check for nroff options if an nroff command was found
 
   AC_MSG_CHECKING([how to use *nroff to get plain text from man pages])
   MANOPT="-man"
-  mancheck=`echo foo | $NROFF $MANOPT 2>/dev/null`
+  mancheck=`echo foo | ${NROFF_BIN} ${MANOPT} 2>/dev/null`
   if test -z "$mancheck"; then
     MANOPT="-mandoc"
-   mancheck=`echo foo | $NROFF $MANOPT 2>/dev/null`
+   mancheck=`echo foo | ${NROFF_BIN} ${MANOPT} 2>/dev/null`
     if test -z "$mancheck"; then
       MANOPT=""
       AC_MSG_RESULT([failed])

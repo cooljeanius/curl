@@ -1,5 +1,5 @@
 iall:
-install:
+install-data-local:
 test:
 
 # TESTCASES are taken from Makefile.inc
