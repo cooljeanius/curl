@@ -37,12 +37,12 @@ MAN2HTML= roffit --mandir=. $< >$@
 
 SUFFIXES = .3 .html
 
-html: $(HTMLPAGES)
+html-local: $(HTMLPAGES)
 
 .3.html:
 	$(MAN2HTML)
 
-pdf: $(PDFPAGES)
+pdf-local: $(PDFPAGES)
 
 .3.pdf:
 	@(foo=`echo $@ | sed -e 's/\.[0-9]$$//g'`; \

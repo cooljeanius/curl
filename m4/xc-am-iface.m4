@@ -70,7 +70,7 @@ dnl is not used.
 
 AC_DEFUN([XC_AUTOMAKE],
 [dnl
-AC_PREREQ([2.50])dnl
+AC_PREREQ([2.69])dnl
 dnl
 AC_BEFORE([$0],[AM_INIT_AUTOMAKE])dnl
 dnl
@@ -233,7 +233,7 @@ dnl no dependency tracking files.
 
 AC_DEFUN([XC_AMEND_DISTCLEAN],
 [dnl
-AC_PREREQ([2.50])dnl
+AC_PREREQ([2.69])dnl
 dnl
 m4_ifdef([_AC_OUTPUT_MAIN_LOOP],
   [m4_provide_if([_AC_OUTPUT_MAIN_LOOP], [],

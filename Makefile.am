@@ -186,10 +186,10 @@ dist-hook:
 	  cp -p $$file $(distdir)$$strip; \
 	done)
 
-html:
+html-local:
 	cd docs && $(MAKE) html
 
-pdf:
+pdf-local:
 	cd docs && $(MAKE) pdf
 
 check: test examples check-docs

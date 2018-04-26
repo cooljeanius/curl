@@ -55,8 +55,11 @@ AC_DEFUN([XC_OVR_ZZ60],
 [dnl
 AC_BEFORE([$0],[LT_INIT])dnl
 AC_BEFORE([$0],[AM_INIT_AUTOMAKE])dnl
-AC_BEFORE([$0],[AC_LIBTOOL_WIN32_DLL])dnl
-AC_BEFORE([$0],[AC_PROG_LIBTOOL])dnl
+AC_BEFORE([$0],[AC_REQUIRE(AC_CANONICAL_HOST)_LT_SET_OPTION([LT_INIT],[win32-dll])
+AC_DIAGNOSE([obsolete],[AC_LIBTOOL_WIN32_DLL: Remove this warning and the call to _LT_SET_OPTION when you
+put the 'win32-dll' option into LT_INIT's first parameter.])
+])dnl
+AC_BEFORE([$0],[LT_INIT])dnl
 dnl
 AC_BEFORE([$0],[AC_CONFIG_MACRO_DIR])dnl
 AC_BEFORE([$0],[AC_CONFIG_MACRO_DIRS])dnl

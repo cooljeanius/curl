@@ -142,7 +142,7 @@ int main (void)
 
 dnl CURL_CHECK_AIX_ALL_SOURCE
 dnl -------------------------------------------------
-dnl Provides a replacement of traditional AC_AIX with
+dnl Provides a replacement of traditional AC_USE_SYSTEM_EXTENSIONS with
 dnl an uniform behaviour across all autoconf versions,
 dnl and with our own placement rules.
 
@@ -2464,16 +2464,14 @@ AC_DEFUN([CURL_VERIFY_RUNTIMELIBS], [
     dnl just run a program to verify that the libs checked for previous to this
     dnl point also is available run-time!
     AC_MSG_CHECKING([run-time libs availability])
-    AC_TRY_RUN([
+    AC_RUN_IFELSE([AC_LANG_SOURCE([[
 main()
 {
   return 0;
 }
-],
-    AC_MSG_RESULT([fine]),
-    AC_MSG_RESULT([failed])
-    AC_MSG_ERROR([one or more libs available at link-time are not available run-time. Libs used at link-time: $LIBS])
-    )
+]])],[AC_MSG_RESULT(fine)],[AC_MSG_RESULT(failed)
+    AC_MSG_ERROR(one or more libs available at link-time are not available run-time. Libs used at link-time: $LIBS)
+    ],[])
 
     dnl if this test fails, configure has already stopped
   fi
@@ -2561,9 +2559,8 @@ AC_DEFUN([CURL_CHECK_CA_BUNDLE], [
   AC_MSG_CHECKING([default CA cert bundle/path])
 
   AC_ARG_WITH(ca-bundle,
-AC_HELP_STRING([--with-ca-bundle=FILE],
-[Path to a file containing CA certificates (example: /etc/ca-bundle.crt)])
-AC_HELP_STRING([--without-ca-bundle], [Don't use a default CA bundle]),
+AS_HELP_STRING([--with-ca-bundle=FILE],[Path to a file containing CA certificates (example: /etc/ca-bundle.crt)])
+AS_HELP_STRING([--without-ca-bundle],[Don't use a default CA bundle]),
   [
     want_ca="$withval"
     if test "x$want_ca" = "xyes"; then
@@ -2572,12 +2569,11 @@ AC_HELP_STRING([--without-ca-bundle], [Don't use a default CA bundle]),
   ],
   [ want_ca="unset" ])
   AC_ARG_WITH(ca-path,
-AC_HELP_STRING([--with-ca-path=DIRECTORY],
-[Path to a directory containing CA certificates stored individually, with \
+AS_HELP_STRING([--with-ca-path=DIRECTORY],[Path to a directory containing CA certificates stored individually, with \
 their filenames in a hash format. This option can be used with OpenSSL, \
 GnuTLS and PolarSSL backends. Refer to OpenSSL c_rehash for details. \
 (example: /etc/certificates)])
-AC_HELP_STRING([--without-ca-path], [Don't use a default CA path]),
+AS_HELP_STRING([--without-ca-path],[Don't use a default CA path]),
   [
     want_capath="$withval"
     if test "x$want_capath" = "xyes"; then
@@ -2687,8 +2683,8 @@ AC_HELP_STRING([--without-ca-path], [Don't use a default CA path]),
 
   AC_MSG_CHECKING([whether to use builtin CA store of SSL library])
   AC_ARG_WITH(ca-fallback,
-AC_HELP_STRING([--with-ca-fallback], [Use the built in CA store of the SSL library])
-AC_HELP_STRING([--without-ca-fallback], [Don't use the built in CA store of the SSL library]),
+AS_HELP_STRING([--with-ca-fallback],[Use the built in CA store of the SSL library])
+AS_HELP_STRING([--without-ca-fallback],[Don't use the built in CA store of the SSL library]),
   [
     if test "x$with_ca_fallback" != "xyes" -a "x$with_ca_fallback" != "xno"; then
       AC_MSG_ERROR([--with-ca-fallback only allows yes or no as parameter])

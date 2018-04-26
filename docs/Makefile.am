@@ -65,10 +65,10 @@ $(abs_builddir)/curl.1:
 		cp -fp "$(srcdir)/curl.1" $@; fi
 	cd cmdline-opts && $(MAKE)
 
-html: $(HTMLPAGES)
+html-local: $(HTMLPAGES)
 	cd libcurl && $(MAKE) html
 
-pdf: $(PDFPAGES)
+pdf-local: $(PDFPAGES)
 	cd libcurl && $(MAKE) pdf
 
 .1.html:
@@ -81,6 +81,6 @@ pdf: $(PDFPAGES)
 	rm $$foo.ps; \
 	echo "converted $< to $@")
 
-distclean:
+distclean-local:
 	rm -f $(CLEANFILES)
 

@@ -1,5 +1,6 @@
 *pid
 *.1.dist
+*.dSYM
 configurehelp.pm
 curl_client_key
 curl_client_key.pub

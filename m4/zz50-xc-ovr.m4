@@ -56,5 +56,5 @@ dnl used for same configure script, overriding those
 dnl provided elsewhere.
 
 AC_DEFUN([XC_OVR_ZZ50],
-  [AC_BEFORE([$0],[AC_PROG_LIBTOOL])])
+  [AC_BEFORE([$0],[LT_INIT])])
 

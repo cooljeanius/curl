@@ -31,6 +31,7 @@ TAGS
 aclocal.m4
 aclocal.m4.bak
 autom4te.cache
+autoscan.log
 compile
 config.cache
 config.guess
@@ -38,6 +39,7 @@ config.log
 config.status
 config.sub
 configure
+configure.scan
 curl-*.tar.bz2
 curl-*.tar.gz
 curl-*.tar.xz

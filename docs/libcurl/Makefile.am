@@ -47,13 +47,13 @@ SUFFIXES = .3 .html
 libcurl-symbols.3: $(srcdir)/symbols-in-versions $(srcdir)/mksymbolsmanpage.pl
 	perl $(srcdir)/mksymbolsmanpage.pl < $(srcdir)/symbols-in-versions > $@
 
-html: $(HTMLPAGES)
+html-local: $(HTMLPAGES)
 	cd opts && $(MAKE) html
 
 .3.html:
 	$(MAN2HTML)
 
-pdf: $(PDFPAGES)
+pdf-local: $(PDFPAGES)
 	cd opts && $(MAKE) pdf
 
 .3.pdf:

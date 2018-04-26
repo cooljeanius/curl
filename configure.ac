@@ -21,10 +21,10 @@
 #***************************************************************************
 dnl Process this file with autoconf to produce a configure script.
 
-AC_PREREQ(2.57)
+AC_PREREQ([2.69])
 
 dnl We don't know the version number "statically" so we use a dash here
-AC_INIT([curl], [-], [a suitable curl mailing list: https://curl.haxx.se/mail/])
+AC_INIT([curl],[-],[a suitable curl mailing list: https://curl.haxx.se/mail/])
 
 XC_OVR_ZZ50
 XC_OVR_ZZ60
@@ -365,8 +365,8 @@ dnl switch off particular protocols
 dnl
 AC_MSG_CHECKING([whether to support http])
 AC_ARG_ENABLE(http,
-AC_HELP_STRING([--enable-http],[Enable HTTP support])
-AC_HELP_STRING([--disable-http],[Disable HTTP support]),
+AS_HELP_STRING([--enable-http],[Enable HTTP support])
+AS_HELP_STRING([--disable-http],[Disable HTTP support]),
 [ case "$enableval" in
   no)
        AC_MSG_RESULT(no)
@@ -384,8 +384,8 @@ AC_HELP_STRING([--disable-http],[Disable HTTP support]),
 )
 AC_MSG_CHECKING([whether to support ftp])
 AC_ARG_ENABLE(ftp,
-AC_HELP_STRING([--enable-ftp],[Enable FTP support])
-AC_HELP_STRING([--disable-ftp],[Disable FTP support]),
+AS_HELP_STRING([--enable-ftp],[Enable FTP support])
+AS_HELP_STRING([--disable-ftp],[Disable FTP support]),
 [ case "$enableval" in
   no)
        AC_MSG_RESULT(no)
@@ -399,8 +399,8 @@ AC_HELP_STRING([--disable-ftp],[Disable FTP support]),
 )
 AC_MSG_CHECKING([whether to support file])
 AC_ARG_ENABLE(file,
-AC_HELP_STRING([--enable-file],[Enable FILE support])
-AC_HELP_STRING([--disable-file],[Disable FILE support]),
+AS_HELP_STRING([--enable-file],[Enable FILE support])
+AS_HELP_STRING([--disable-file],[Disable FILE support]),
 [ case "$enableval" in
   no)
        AC_MSG_RESULT(no)
@@ -414,8 +414,8 @@ AC_HELP_STRING([--disable-file],[Disable FILE support]),
 )
 AC_MSG_CHECKING([whether to support ldap])
 AC_ARG_ENABLE(ldap,
-AC_HELP_STRING([--enable-ldap],[Enable LDAP support])
-AC_HELP_STRING([--disable-ldap],[Disable LDAP support]),
+AS_HELP_STRING([--enable-ldap],[Enable LDAP support])
+AS_HELP_STRING([--disable-ldap],[Disable LDAP support]),
 [ case "$enableval" in
   no)
        AC_MSG_RESULT(no)
@@ -430,8 +430,8 @@ AC_HELP_STRING([--disable-ldap],[Disable LDAP support]),
 )
 AC_MSG_CHECKING([whether to support ldaps])
 AC_ARG_ENABLE(ldaps,
-AC_HELP_STRING([--enable-ldaps],[Enable LDAPS support])
-AC_HELP_STRING([--disable-ldaps],[Disable LDAPS support]),
+AS_HELP_STRING([--enable-ldaps],[Enable LDAPS support])
+AS_HELP_STRING([--disable-ldaps],[Disable LDAPS support]),
 [ case "$enableval" in
   no)
        AC_MSG_RESULT(no)
@@ -462,8 +462,8 @@ AC_HELP_STRING([--disable-ldaps],[Disable LDAPS support]),
 
 AC_MSG_CHECKING([whether to support rtsp])
 AC_ARG_ENABLE(rtsp,
-AC_HELP_STRING([--enable-rtsp],[Enable RTSP support])
-AC_HELP_STRING([--disable-rtsp],[Disable RTSP support]),
+AS_HELP_STRING([--enable-rtsp],[Enable RTSP support])
+AS_HELP_STRING([--disable-rtsp],[Disable RTSP support]),
 [ case "$enableval" in
   no)
        AC_MSG_RESULT(no)
@@ -488,8 +488,8 @@ AC_HELP_STRING([--disable-rtsp],[Disable RTSP support]),
 
 AC_MSG_CHECKING([whether to support proxies])
 AC_ARG_ENABLE(proxy,
-AC_HELP_STRING([--enable-proxy],[Enable proxy support])
-AC_HELP_STRING([--disable-proxy],[Disable proxy support]),
+AS_HELP_STRING([--enable-proxy],[Enable proxy support])
+AS_HELP_STRING([--disable-proxy],[Disable proxy support]),
 [ case "$enableval" in
   no)
        AC_MSG_RESULT(no)
@@ -504,8 +504,8 @@ AC_HELP_STRING([--disable-proxy],[Disable proxy support]),
 
 AC_MSG_CHECKING([whether to support dict])
 AC_ARG_ENABLE(dict,
-AC_HELP_STRING([--enable-dict],[Enable DICT support])
-AC_HELP_STRING([--disable-dict],[Disable DICT support]),
+AS_HELP_STRING([--enable-dict],[Enable DICT support])
+AS_HELP_STRING([--disable-dict],[Disable DICT support]),
 [ case "$enableval" in
   no)
        AC_MSG_RESULT(no)
@@ -519,8 +519,8 @@ AC_HELP_STRING([--disable-dict],[Disable DICT support]),
 )
 AC_MSG_CHECKING([whether to support telnet])
 AC_ARG_ENABLE(telnet,
-AC_HELP_STRING([--enable-telnet],[Enable TELNET support])
-AC_HELP_STRING([--disable-telnet],[Disable TELNET support]),
+AS_HELP_STRING([--enable-telnet],[Enable TELNET support])
+AS_HELP_STRING([--disable-telnet],[Disable TELNET support]),
 [ case "$enableval" in
   no)
        AC_MSG_RESULT(no)
@@ -534,8 +534,8 @@ AC_HELP_STRING([--disable-telnet],[Disable TELNET support]),
 )
 AC_MSG_CHECKING([whether to support tftp])
 AC_ARG_ENABLE(tftp,
-AC_HELP_STRING([--enable-tftp],[Enable TFTP support])
-AC_HELP_STRING([--disable-tftp],[Disable TFTP support]),
+AS_HELP_STRING([--enable-tftp],[Enable TFTP support])
+AS_HELP_STRING([--disable-tftp],[Disable TFTP support]),
 [ case "$enableval" in
   no)
        AC_MSG_RESULT(no)
@@ -550,8 +550,8 @@ AC_HELP_STRING([--disable-tftp],[Disable TFTP support]),
 
 AC_MSG_CHECKING([whether to support pop3])
 AC_ARG_ENABLE(pop3,
-AC_HELP_STRING([--enable-pop3],[Enable POP3 support])
-AC_HELP_STRING([--disable-pop3],[Disable POP3 support]),
+AS_HELP_STRING([--enable-pop3],[Enable POP3 support])
+AS_HELP_STRING([--disable-pop3],[Disable POP3 support]),
 [ case "$enableval" in
   no)
        AC_MSG_RESULT(no)
@@ -567,8 +567,8 @@ AC_HELP_STRING([--disable-pop3],[Disable POP3 support]),
 
 AC_MSG_CHECKING([whether to support imap])
 AC_ARG_ENABLE(imap,
-AC_HELP_STRING([--enable-imap],[Enable IMAP support])
-AC_HELP_STRING([--disable-imap],[Disable IMAP support]),
+AS_HELP_STRING([--enable-imap],[Enable IMAP support])
+AS_HELP_STRING([--disable-imap],[Disable IMAP support]),
 [ case "$enableval" in
   no)
        AC_MSG_RESULT(no)
@@ -584,8 +584,8 @@ AC_HELP_STRING([--disable-imap],[Disable IMAP support]),
 
 AC_MSG_CHECKING([whether to support smb])
 AC_ARG_ENABLE(smb,
-AC_HELP_STRING([--enable-smb],[Enable SMB/CIFS support])
-AC_HELP_STRING([--disable-smb],[Disable SMB/CIFS support]),
+AS_HELP_STRING([--enable-smb],[Enable SMB/CIFS support])
+AS_HELP_STRING([--disable-smb],[Disable SMB/CIFS support]),
 [ case "$enableval" in
   no)
        AC_MSG_RESULT(no)
@@ -600,8 +600,8 @@ AC_HELP_STRING([--disable-smb],[Disable SMB/CIFS support]),
 
 AC_MSG_CHECKING([whether to support smtp])
 AC_ARG_ENABLE(smtp,
-AC_HELP_STRING([--enable-smtp],[Enable SMTP support])
-AC_HELP_STRING([--disable-smtp],[Disable SMTP support]),
+AS_HELP_STRING([--enable-smtp],[Enable SMTP support])
+AS_HELP_STRING([--disable-smtp],[Disable SMTP support]),
 [ case "$enableval" in
   no)
        AC_MSG_RESULT(no)
@@ -616,8 +616,8 @@ AC_HELP_STRING([--disable-smtp],[Disable SMTP support]),
 
 AC_MSG_CHECKING([whether to support gopher])
 AC_ARG_ENABLE(gopher,
-AC_HELP_STRING([--enable-gopher],[Enable Gopher support])
-AC_HELP_STRING([--disable-gopher],[Disable Gopher support]),
+AS_HELP_STRING([--enable-gopher],[Enable Gopher support])
+AS_HELP_STRING([--disable-gopher],[Disable Gopher support]),
 [ case "$enableval" in
   no)
        AC_MSG_RESULT(no)
@@ -637,8 +637,8 @@ dnl **********************************************************************
 
 AC_MSG_CHECKING([whether to provide built-in manual])
 AC_ARG_ENABLE(manual,
-AC_HELP_STRING([--enable-manual],[Enable built-in manual])
-AC_HELP_STRING([--disable-manual],[Disable built-in manual]),
+AS_HELP_STRING([--enable-manual],[Enable built-in manual])
+AS_HELP_STRING([--disable-manual],[Disable built-in manual]),
 [ case "$enableval" in
   no)
        AC_MSG_RESULT(no)
@@ -658,8 +658,8 @@ dnl disable C code generation support
 dnl
 AC_MSG_CHECKING([whether to enable generation of C code])
 AC_ARG_ENABLE(libcurl_option,
-AC_HELP_STRING([--enable-libcurl-option],[Enable --libcurl C code generation support])
-AC_HELP_STRING([--disable-libcurl-option],[Disable --libcurl C code generation support]),
+AS_HELP_STRING([--enable-libcurl-option],[Enable --libcurl C code generation support])
+AS_HELP_STRING([--disable-libcurl-option],[Disable --libcurl C code generation support]),
 [ case "$enableval" in
   no)
        AC_MSG_RESULT(no)
@@ -678,7 +678,7 @@ dnl **********************************************************************
 
 AC_MSG_CHECKING([whether to use libgcc])
 AC_ARG_ENABLE(libgcc,
-AC_HELP_STRING([--enable-libgcc],[use libgcc when linking]),
+AS_HELP_STRING([--enable-libgcc],[use libgcc when linking]),
 [ case "$enableval" in
   yes)
        LIBS="-lgcc $LIBS"
@@ -884,8 +884,8 @@ clean_LDFLAGS=$LDFLAGS
 clean_LIBS=$LIBS
 ZLIB_LIBS=""
 AC_ARG_WITH(zlib,
-AC_HELP_STRING([--with-zlib=PATH],[search for zlib in PATH])
-AC_HELP_STRING([--without-zlib],[disable use of zlib]),
+AS_HELP_STRING([--with-zlib=PATH],[search for zlib in PATH])
+AS_HELP_STRING([--without-zlib],[disable use of zlib]),
                [OPT_ZLIB="$withval"])
 
 if test "$OPT_ZLIB" = "no" ; then
@@ -991,8 +991,8 @@ dnl Brotli project home page: https://github.com/google/brotli
 dnl Default to compiler & linker defaults for BROTLI files & libraries.
 OPT_BROTLI=off
 AC_ARG_WITH(brotli,dnl
-AC_HELP_STRING([--with-brotli=PATH],[Where to look for brotli, PATH points to the BROTLI installation; when possible, set the PKG_CONFIG_PATH environment variable instead of using this option])
-AC_HELP_STRING([--without-brotli], [disable BROTLI]),
+AS_HELP_STRING([--with-brotli=PATH],[Where to look for brotli, PATH points to the BROTLI installation; when possible, set the PKG_CONFIG_PATH environment variable instead of using this option])
+AS_HELP_STRING([--without-brotli],[disable BROTLI]),
   OPT_BROTLI=$withval)
 
 if test X"$OPT_BROTLI" != Xno; then
@@ -1076,12 +1076,12 @@ dnl **********************************************************************
 
 LDAPLIBNAME=""
 AC_ARG_WITH(ldap-lib,
-AC_HELP_STRING([--with-ldap-lib=libname],[Specify name of ldap lib file]),
+AS_HELP_STRING([--with-ldap-lib=libname],[Specify name of ldap lib file]),
  [LDAPLIBNAME="$withval"])
 
 LBERLIBNAME=""
 AC_ARG_WITH(lber-lib,
-AC_HELP_STRING([--with-lber-lib=libname],[Specify name of lber lib file]),
+AS_HELP_STRING([--with-lber-lib=libname],[Specify name of lber lib file]),
  [LBERLIBNAME="$withval"])
 
 if test x$CURL_DISABLE_LDAP != x1 ; then
@@ -1162,8 +1162,8 @@ dnl **********************************************************************
 
 AC_MSG_CHECKING([whether to enable IPv6])
 AC_ARG_ENABLE(ipv6,
-AC_HELP_STRING([--enable-ipv6],[Enable IPv6 (with IPv4) support])
-AC_HELP_STRING([--disable-ipv6],[Disable IPv6 support]),
+AS_HELP_STRING([--enable-ipv6],[Enable IPv6 (with IPv4) support])
+AS_HELP_STRING([--disable-ipv6],[Disable IPv6 support]),
 [ case "$enableval" in
   no)
        AC_MSG_RESULT(no)
@@ -1174,7 +1174,7 @@ AC_HELP_STRING([--disable-ipv6],[Disable IPv6 support]),
        ;;
   esac ],
 
-  AC_TRY_RUN([ /* is AF_INET6 available? */
+  AC_RUN_IFELSE([AC_LANG_SOURCE([[ /* is AF_INET6 available? */
 #include <sys/types.h>
 #ifdef HAVE_WINSOCK2_H
 #include <winsock2.h>
@@ -1189,14 +1189,11 @@ main()
  else
    exit(0);
 }
-],
-  AC_MSG_RESULT(yes)
-  ipv6=yes,
-  AC_MSG_RESULT(no)
-  ipv6=no,
-  AC_MSG_RESULT(yes)
+]])],[AC_MSG_RESULT(yes)
+  ipv6=yes],[AC_MSG_RESULT(no)
+  ipv6=no],[AC_MSG_RESULT(yes)
   ipv6=yes
-))
+]))
 
 if test "$ipv6" = "yes"; then
   curl_ipv6_msg="enabled"
@@ -1205,7 +1202,7 @@ fi
 # Check if struct sockaddr_in6 have sin6_scope_id member
 if test "$ipv6" = yes; then
   AC_MSG_CHECKING([if struct sockaddr_in6 has sin6_scope_id member])
-  AC_TRY_COMPILE([
+  AC_COMPILE_IFELSE([AC_LANG_PROGRAM([[
 #include <sys/types.h>
 #ifdef HAVE_WINSOCK2_H
 #include <winsock2.h>
@@ -1215,8 +1212,7 @@ if test "$ipv6" = yes; then
 #if defined (__TANDEM)
 # include <netinet/in6.h>
 #endif
-#endif] ,
-  struct sockaddr_in6 s; s.sin6_scope_id = 0; , have_sin6_scope_id=yes)
+#endif ]], [[struct sockaddr_in6 s; s.sin6_scope_id = 0; ]])],[have_sin6_scope_id=yes],[])
   if test "$have_sin6_scope_id" = yes; then
     AC_MSG_RESULT([yes])
     AC_DEFINE(HAVE_SOCKADDR_IN6_SIN6_SCOPE_ID, 1, [Define to 1 if struct sockaddr_in6 has the sin6_scope_id member])
@@ -1266,22 +1262,19 @@ dnl check for GSS-API stuff in the /usr as default
 
 GSSAPI_ROOT="/usr"
 AC_ARG_WITH(gssapi-includes,
-  AC_HELP_STRING([--with-gssapi-includes=DIR],
-                 [Specify location of GSS-API headers]),
+  AS_HELP_STRING([--with-gssapi-includes=DIR],[Specify location of GSS-API headers]),
   [ GSSAPI_INCS="-I$withval"
     want_gss="yes" ]
 )
 
 AC_ARG_WITH(gssapi-libs,
-  AC_HELP_STRING([--with-gssapi-libs=DIR],
-                 [Specify location of GSS-API libs]),
+  AS_HELP_STRING([--with-gssapi-libs=DIR],[Specify location of GSS-API libs]),
   [ GSSAPI_LIB_DIR="-L$withval"
     want_gss="yes" ]
 )
 
 AC_ARG_WITH(gssapi,
-  AC_HELP_STRING([--with-gssapi=DIR],
-                 [Where to look for GSS-API]), [
+  AS_HELP_STRING([--with-gssapi=DIR],[Where to look for GSS-API]), [
   GSSAPI_ROOT="$withval"
   if test x"$GSSAPI_ROOT" != xno; then
     want_gss="yes"
@@ -1446,8 +1439,8 @@ dnl -------------------------------------------------------------
 DEFAULT_SSL_BACKEND=no
 VALID_DEFAULT_SSL_BACKEND=
 AC_ARG_WITH(default-ssl-backend,
-AC_HELP_STRING([--with-default-ssl-backend=NAME],[Use NAME as default SSL backend])
-AC_HELP_STRING([--without-default-ssl-backend],[Use implicit default SSL backend]),
+AS_HELP_STRING([--with-default-ssl-backend=NAME],[Use NAME as default SSL backend])
+AS_HELP_STRING([--without-default-ssl-backend],[Use implicit default SSL backend]),
   [DEFAULT_SSL_BACKEND=$withval])
 case "$DEFAULT_SSL_BACKEND" in
   no)
@@ -1473,8 +1466,8 @@ dnl -------------------------------------------------
 
 OPT_WINSSL=no
 AC_ARG_WITH(winssl,dnl
-AC_HELP_STRING([--with-winssl],[enable Windows native SSL/TLS])
-AC_HELP_STRING([--without-winssl], [disable Windows native SSL/TLS]),
+AS_HELP_STRING([--with-winssl],[enable Windows native SSL/TLS])
+AS_HELP_STRING([--without-winssl],[disable Windows native SSL/TLS]),
   OPT_WINSSL=$withval)
 
 AC_MSG_CHECKING([whether to enable Windows native SSL/TLS (Windows native builds only)])
@@ -1503,8 +1496,8 @@ fi
 
 OPT_DARWINSSL=no
 AC_ARG_WITH(darwinssl,dnl
-AC_HELP_STRING([--with-darwinssl],[enable Apple OS native SSL/TLS])
-AC_HELP_STRING([--without-darwinssl], [disable Apple OS native SSL/TLS]),
+AS_HELP_STRING([--with-darwinssl],[enable Apple OS native SSL/TLS])
+AS_HELP_STRING([--without-darwinssl],[disable Apple OS native SSL/TLS]),
   OPT_DARWINSSL=$withval)
 
 AC_MSG_CHECKING([whether to enable Apple OS native SSL/TLS])
@@ -1535,8 +1528,8 @@ OPT_SSL=off
 dnl Default to no CA bundle
 ca="no"
 AC_ARG_WITH(ssl,dnl
-AC_HELP_STRING([--with-ssl=PATH],[Where to look for OpenSSL, PATH points to the SSL installation (default: /usr/local/ssl); when possible, set the PKG_CONFIG_PATH environment variable instead of using this option])
-AC_HELP_STRING([--without-ssl], [disable OpenSSL]),
+AS_HELP_STRING([--with-ssl=PATH],[Where to look for OpenSSL, PATH points to the SSL installation (default: /usr/local/ssl); when possible, set the PKG_CONFIG_PATH environment variable instead of using this option])
+AS_HELP_STRING([--without-ssl],[disable OpenSSL]),
   OPT_SSL=$withval)
 
 if test -z "$ssl_backends" -o "x$OPT_SSL" != xno &&
@@ -1554,15 +1547,12 @@ if test -z "$ssl_backends" -o "x$OPT_SSL" != xno &&
       AC_MSG_CHECKING([for gdi32])
       my_ac_save_LIBS=$LIBS
       LIBS="-lgdi32 $LIBS"
-      AC_TRY_LINK([#include <windef.h>
-                   #include <wingdi.h>],
-                   [GdiFlush();],
-                   [ dnl worked!
-                   AC_MSG_RESULT([yes])],
-                   [ dnl failed, restore LIBS
+      AC_LINK_IFELSE([AC_LANG_PROGRAM([[#include <windef.h>
+                   #include <wingdi.h>]], [[GdiFlush();]])],[ dnl worked!
+                   AC_MSG_RESULT([yes])],[ dnl failed, restore LIBS
                    LIBS=$my_ac_save_LIBS
-                   AC_MSG_RESULT(no)]
-                  )
+                   AC_MSG_RESULT(no)
+                  ])
       ;;
   esac
 
@@ -1657,35 +1647,27 @@ if test -z "$ssl_backends" -o "x$OPT_SSL" != xno &&
        dnl still no, but what about with -ldl?
        AC_MSG_CHECKING([OpenSSL linking with -ldl])
        LIBS="$LIBS -ldl"
-       AC_TRY_LINK(
-       [
+       AC_LINK_IFELSE([AC_LANG_PROGRAM([[
          #include <openssl/err.h>
-       ],
-       [
+       ]], [[
          ERR_clear_error();
-       ],
-       [
+       ]])],[
          AC_MSG_RESULT(yes)
          HAVECRYPTO="yes"
-       ],
-       [
+       ],[
          AC_MSG_RESULT(no)
          dnl ok, so what about bouth -ldl and -lpthread?
 
          AC_MSG_CHECKING([OpenSSL linking with -ldl and -lpthread])
          LIBS="$LIBS -lpthread"
-         AC_TRY_LINK(
-         [
+         AC_LINK_IFELSE([AC_LANG_PROGRAM([[
            #include <openssl/err.h>
-         ],
-         [
+         ]], [[
            ERR_clear_error();
-         ],
-         [
+         ]])],[
            AC_MSG_RESULT(yes)
            HAVECRYPTO="yes"
-         ],
-         [
+         ],[
            AC_MSG_RESULT(no)
            LDFLAGS="$CLEANLDFLAGS"
            CPPFLAGS="$CLEANCPPFLAGS"
@@ -1831,8 +1813,7 @@ dnl **********************************************************************
 
 if test X"$OPENSSL_ENABLED" = X"1"; then
   AC_ARG_WITH(egd-socket,
-  AC_HELP_STRING([--with-egd-socket=FILE],
-                 [Entropy Gathering Daemon socket pathname]),
+  AS_HELP_STRING([--with-egd-socket=FILE],[Entropy Gathering Daemon socket pathname]),
       [ EGD_SOCKET="$withval" ]
   )
   if test -n "$EGD_SOCKET" ; then
@@ -1842,8 +1823,7 @@ if test X"$OPENSSL_ENABLED" = X"1"; then
 
   dnl Check for user-specified random device
   AC_ARG_WITH(random,
-  AC_HELP_STRING([--with-random=FILE],
-                 [read randomness from FILE (default=/dev/urandom)]),
+  AS_HELP_STRING([--with-random=FILE],[read randomness from FILE (default=/dev/urandom)]),
       [ RANDOM_FILE="$withval" ],
       [
           if test x$cross_compiling != xyes; then
@@ -1880,8 +1860,8 @@ dnl Default to compiler & linker defaults for GnuTLS files & libraries.
 OPT_GNUTLS=no
 
 AC_ARG_WITH(gnutls,dnl
-AC_HELP_STRING([--with-gnutls=PATH],[where to look for GnuTLS, PATH points to the installation root])
-AC_HELP_STRING([--without-gnutls], [disable GnuTLS detection]),
+AS_HELP_STRING([--with-gnutls=PATH],[where to look for GnuTLS, PATH points to the installation root])
+AS_HELP_STRING([--without-gnutls],[disable GnuTLS detection]),
   OPT_GNUTLS=$withval)
 
 if test -z "$ssl_backends" -o "x$OPT_GNUTLS" != xno; then
@@ -2042,8 +2022,8 @@ OPT_POLARSSL=no
 _cppflags=$CPPFLAGS
 _ldflags=$LDFLAGS
 AC_ARG_WITH(polarssl,dnl
-AC_HELP_STRING([--with-polarssl=PATH],[where to look for PolarSSL, PATH points to the installation root])
-AC_HELP_STRING([--without-polarssl], [disable PolarSSL detection]),
+AS_HELP_STRING([--with-polarssl=PATH],[where to look for PolarSSL, PATH points to the installation root])
+AS_HELP_STRING([--without-polarssl],[disable PolarSSL detection]),
   OPT_POLARSSL=$withval)
 
 if test -z "$ssl_backends" -o "x$OPT_POLARSSL" != xno; then
@@ -2133,8 +2113,8 @@ OPT_MBEDTLS=no
 _cppflags=$CPPFLAGS
 _ldflags=$LDFLAGS
 AC_ARG_WITH(mbedtls,dnl
-AC_HELP_STRING([--with-mbedtls=PATH],[where to look for mbedTLS, PATH points to the installation root])
-AC_HELP_STRING([--without-mbedtls], [disable mbedTLS detection]),
+AS_HELP_STRING([--with-mbedtls=PATH],[where to look for mbedTLS, PATH points to the installation root])
+AS_HELP_STRING([--without-mbedtls],[disable mbedTLS detection]),
   OPT_MBEDTLS=$withval)
 
 if test -z "$ssl_backends" -o "x$OPT_MBEDTLS" != xno; then
@@ -2225,8 +2205,8 @@ OPT_CYASSL=no
 _cppflags=$CPPFLAGS
 _ldflags=$LDFLAGS
 AC_ARG_WITH(cyassl,dnl
-AC_HELP_STRING([--with-cyassl=PATH],[where to look for CyaSSL, PATH points to the installation root (default: system lib default)])
-AC_HELP_STRING([--without-cyassl], [disable CyaSSL detection]),
+AS_HELP_STRING([--with-cyassl=PATH],[where to look for CyaSSL, PATH points to the installation root (default: system lib default)])
+AS_HELP_STRING([--without-cyassl],[disable CyaSSL detection]),
   OPT_CYASSL=$withval)
 
 if test -z "$ssl_backends" -o "x$OPT_CYASSL" != xno; then
@@ -2391,8 +2371,8 @@ dnl Default to compiler & linker defaults for NSS files & libraries.
 OPT_NSS=no
 
 AC_ARG_WITH(nss,dnl
-AC_HELP_STRING([--with-nss=PATH],[where to look for NSS, PATH points to the installation root])
-AC_HELP_STRING([--without-nss], [disable NSS detection]),
+AS_HELP_STRING([--with-nss=PATH],[where to look for NSS, PATH points to the installation root])
+AS_HELP_STRING([--without-nss],[disable NSS detection]),
   OPT_NSS=$withval)
 
 if test -z "$ssl_backends" -o "x$OPT_NSS" != xno; then
@@ -2507,8 +2487,8 @@ fi
 OPT_AXTLS=off
 
 AC_ARG_WITH(axtls,dnl
-AC_HELP_STRING([--with-axtls=PATH],[Where to look for axTLS, PATH points to the axTLS installation prefix (default: /usr/local).  Ignored if another SSL engine is selected.])
-AC_HELP_STRING([--without-axtls], [disable axTLS]),
+AS_HELP_STRING([--with-axtls=PATH],[Where to look for axTLS, PATH points to the axTLS installation prefix (default: /usr/local).  Ignored if another SSL engine is selected.])
+AS_HELP_STRING([--without-axtls],[disable axTLS]),
   OPT_AXTLS=$withval)
 
 if test -z "$ssl_backends" -o "x$OPT_AXTLS" != xno; then
@@ -2636,8 +2616,8 @@ dnl **********************************************************************
 OPT_LIBMETALINK=no
 
 AC_ARG_WITH(libmetalink,dnl
-AC_HELP_STRING([--with-libmetalink=PATH],[where to look for libmetalink, PATH points to the installation root])
-AC_HELP_STRING([--without-libmetalink], [disable libmetalink detection]),
+AS_HELP_STRING([--with-libmetalink=PATH],[where to look for libmetalink, PATH points to the installation root])
+AS_HELP_STRING([--without-libmetalink],[disable libmetalink detection]),
   OPT_LIBMETALINK=$withval)
 
 if test X"$OPT_LIBMETALINK" != Xno; then
@@ -2724,15 +2704,15 @@ dnl **********************************************************************
 dnl Default to compiler & linker defaults for LIBSSH2 files & libraries.
 OPT_LIBSSH2=off
 AC_ARG_WITH(libssh2,dnl
-AC_HELP_STRING([--with-libssh2=PATH],[Where to look for libssh2, PATH points to the LIBSSH2 installation; when possible, set the PKG_CONFIG_PATH environment variable instead of using this option])
-AC_HELP_STRING([--with-libssh2], [enable LIBSSH2]),
+AS_HELP_STRING([--with-libssh2=PATH],[Where to look for libssh2, PATH points to the LIBSSH2 installation; when possible, set the PKG_CONFIG_PATH environment variable instead of using this option])
+AS_HELP_STRING([--with-libssh2],[enable LIBSSH2]),
   OPT_LIBSSH2=$withval, OPT_LIBSSH2=no)
 
 
 OPT_LIBSSH=off
 AC_ARG_WITH(libssh,dnl
-AC_HELP_STRING([--with-libssh=PATH],[Where to look for libssh, PATH points to the LIBSSH installation; when possible, set the PKG_CONFIG_PATH environment variable instead of using this option])
-AC_HELP_STRING([--with-libssh], [enable LIBSSH]),
+AS_HELP_STRING([--with-libssh=PATH],[Where to look for libssh, PATH points to the LIBSSH installation; when possible, set the PKG_CONFIG_PATH environment variable instead of using this option])
+AS_HELP_STRING([--with-libssh],[enable LIBSSH]),
   OPT_LIBSSH=$withval, OPT_LIBSSH=no)
 
 if test X"$OPT_LIBSSH2" != Xno; then
@@ -2890,8 +2870,8 @@ dnl **********************************************************************
 dnl Default to compiler & linker defaults for LIBRTMP files & libraries.
 OPT_LIBRTMP=off
 AC_ARG_WITH(librtmp,dnl
-AC_HELP_STRING([--with-librtmp=PATH],[Where to look for librtmp, PATH points to the LIBRTMP installation; when possible, set the PKG_CONFIG_PATH environment variable instead of using this option])
-AC_HELP_STRING([--without-librtmp], [disable LIBRTMP]),
+AS_HELP_STRING([--with-librtmp=PATH],[Where to look for librtmp, PATH points to the LIBRTMP installation; when possible, set the PKG_CONFIG_PATH environment variable instead of using this option])
+AS_HELP_STRING([--without-librtmp],[disable LIBRTMP]),
   OPT_LIBRTMP=$withval)
 
 if test X"$OPT_LIBRTMP" != Xno; then
@@ -2969,8 +2949,8 @@ dnl **********************************************************************
 versioned_symbols_flavour=
 AC_MSG_CHECKING([whether versioned symbols are wanted])
 AC_ARG_ENABLE(versioned-symbols,
-AC_HELP_STRING([--enable-versioned-symbols], [Enable versioned symbols in shared library])
-AC_HELP_STRING([--disable-versioned-symbols], [Disable versioned symbols in shared library]),
+AS_HELP_STRING([--enable-versioned-symbols],[Enable versioned symbols in shared library])
+AS_HELP_STRING([--disable-versioned-symbols],[Disable versioned symbols in shared library]),
 [ case "$enableval" in
   yes) AC_MSG_RESULT(yes)
     AC_MSG_CHECKING([if libraries can be versioned])
@@ -3025,8 +3005,8 @@ dnl -------------------------------------------------
 AC_MSG_CHECKING([whether to enable Windows native IDN (Windows native builds only)])
 OPT_WINIDN="default"
 AC_ARG_WITH(winidn,
-AC_HELP_STRING([--with-winidn=PATH],[enable Windows native IDN])
-AC_HELP_STRING([--without-winidn], [disable Windows native IDN]),
+AS_HELP_STRING([--with-winidn=PATH],[enable Windows native IDN])
+AS_HELP_STRING([--without-winidn],[disable Windows native IDN]),
   OPT_WINIDN=$withval)
 case "$OPT_WINIDN" in
   no|default)
@@ -3103,8 +3083,8 @@ dnl **********************************************************************
 AC_MSG_CHECKING([whether to build with libidn2])
 OPT_IDN="default"
 AC_ARG_WITH(libidn2,
-AC_HELP_STRING([--with-libidn2=PATH],[Enable libidn2 usage])
-AC_HELP_STRING([--without-libidn2],[Disable libidn2 usage]),
+AS_HELP_STRING([--with-libidn2=PATH],[Enable libidn2 usage])
+AS_HELP_STRING([--without-libidn2],[Disable libidn2 usage]),
   [OPT_IDN=$withval])
 case "$OPT_IDN" in
   no)
@@ -3238,8 +3218,8 @@ if test "x$disable_http" = "xyes"; then
 fi
 
 AC_ARG_WITH(nghttp2,
-AC_HELP_STRING([--with-nghttp2=PATH],[Enable nghttp2 usage])
-AC_HELP_STRING([--without-nghttp2],[Disable nghttp2 usage]),
+AS_HELP_STRING([--with-nghttp2=PATH],[Enable nghttp2 usage])
+AS_HELP_STRING([--without-nghttp2],[Disable nghttp2 usage]),
   [OPT_H2=$withval])
 case "$OPT_H2" in
   no)
@@ -3318,8 +3298,8 @@ dnl **********************************************************************
 
 OPT_ZSH_FPATH=default
 AC_ARG_WITH(zsh-functions-dir,
-AC_HELP_STRING([--with-zsh-functions-dir=PATH],[Install zsh completions to PATH])
-AC_HELP_STRING([--without-zsh-functions-dir],[Do not install zsh completions]),
+AS_HELP_STRING([--with-zsh-functions-dir=PATH],[Install zsh completions to PATH])
+AS_HELP_STRING([--without-zsh-functions-dir],[Do not install zsh completions]),
   [OPT_ZSH_FPATH=$withval])
 case "$OPT_ZSH_FPATH" in
   no)
@@ -3702,9 +3682,8 @@ dnl disable POSIX threads
 dnl
 AC_MSG_CHECKING([whether to use POSIX threads for threaded resolver])
 AC_ARG_ENABLE(pthreads,
-AC_HELP_STRING([--enable-pthreads],
-               [Enable POSIX threads (default for threaded resolver)])
-AC_HELP_STRING([--disable-pthreads],[Disable POSIX threads]),
+AS_HELP_STRING([--enable-pthreads],[Enable POSIX threads (default for threaded resolver)])
+AS_HELP_STRING([--disable-pthreads],[Disable POSIX threads]),
 [ case "$enableval" in
   no)  AC_MSG_RESULT(no)
        want_pthreads=no
@@ -3783,8 +3762,8 @@ dnl disable verbose text strings
 dnl
 AC_MSG_CHECKING([whether to enable verbose strings])
 AC_ARG_ENABLE(verbose,
-AC_HELP_STRING([--enable-verbose],[Enable verbose strings])
-AC_HELP_STRING([--disable-verbose],[Disable verbose strings]),
+AS_HELP_STRING([--enable-verbose],[Enable verbose strings])
+AS_HELP_STRING([--disable-verbose],[Disable verbose strings]),
 [ case "$enableval" in
   no)
        AC_MSG_RESULT(no)
@@ -3802,8 +3781,8 @@ dnl enable SSPI support
 dnl
 AC_MSG_CHECKING([whether to enable SSPI support (Windows native builds only)])
 AC_ARG_ENABLE(sspi,
-AC_HELP_STRING([--enable-sspi],[Enable SSPI])
-AC_HELP_STRING([--disable-sspi],[Disable SSPI]),
+AS_HELP_STRING([--enable-sspi],[Enable SSPI])
+AS_HELP_STRING([--disable-sspi],[Disable SSPI]),
 [ case "$enableval" in
   yes)
        if test "$curl_cv_native_windows" = "yes"; then
@@ -3838,8 +3817,8 @@ dnl disable cryptographic authentication
 dnl
 AC_MSG_CHECKING([whether to enable cryptographic authentication methods])
 AC_ARG_ENABLE(crypto-auth,
-AC_HELP_STRING([--enable-crypto-auth],[Enable cryptographic authentication])
-AC_HELP_STRING([--disable-crypto-auth],[Disable cryptographic authentication]),
+AS_HELP_STRING([--enable-crypto-auth],[Enable cryptographic authentication])
+AS_HELP_STRING([--disable-crypto-auth],[Disable cryptographic authentication]),
 [ case "$enableval" in
   no)
        AC_MSG_RESULT(no)
@@ -3861,8 +3840,8 @@ dnl disable TLS-SRP authentication
 dnl
 AC_MSG_CHECKING([whether to enable TLS-SRP authentication])
 AC_ARG_ENABLE(tls-srp,
-AC_HELP_STRING([--enable-tls-srp],[Enable TLS-SRP authentication])
-AC_HELP_STRING([--disable-tls-srp],[Disable TLS-SRP authentication]),
+AS_HELP_STRING([--enable-tls-srp],[Enable TLS-SRP authentication])
+AS_HELP_STRING([--disable-tls-srp],[Disable TLS-SRP authentication]),
 [ case "$enableval" in
   no)
        AC_MSG_RESULT(no)
@@ -3888,8 +3867,8 @@ dnl disable Unix domain sockets support
 dnl
 AC_MSG_CHECKING([whether to enable Unix domain sockets])
 AC_ARG_ENABLE(unix-sockets,
-AC_HELP_STRING([--enable-unix-sockets],[Enable Unix domain sockets])
-AC_HELP_STRING([--disable-unix-sockets],[Disable Unix domain sockets]),
+AS_HELP_STRING([--enable-unix-sockets],[Enable Unix domain sockets])
+AS_HELP_STRING([--disable-unix-sockets],[Disable Unix domain sockets]),
 [ case "$enableval" in
   no)  AC_MSG_RESULT(no)
        want_unix_sockets=no
@@ -3921,8 +3900,8 @@ dnl disable cookies support
 dnl
 AC_MSG_CHECKING([whether to enable support for cookies])
 AC_ARG_ENABLE(cookies,
-AC_HELP_STRING([--enable-cookies],[Enable cookies support])
-AC_HELP_STRING([--disable-cookies],[Disable cookies support]),
+AS_HELP_STRING([--enable-cookies],[Enable cookies support])
+AS_HELP_STRING([--disable-cookies],[Disable cookies support]),
 [ case "$enableval" in
   no)
        AC_MSG_RESULT(no)

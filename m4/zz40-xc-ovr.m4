@@ -470,7 +470,7 @@ dnl PATH_SEPARATOR check.
 
 AC_DEFUN([XC_CONFIGURE_PREAMBLE],
 [dnl
-AC_PREREQ([2.50])dnl
+AC_PREREQ([2.69])dnl
 dnl
 AC_BEFORE([$0],[_XC_CFG_PRE_PREAMBLE])dnl
 AC_BEFORE([$0],[_XC_CFG_PRE_BASIC_CHK_CMD_ECHO])dnl
@@ -500,11 +500,14 @@ AC_BEFORE([$0],[AC_PROG_LN_S])dnl
 AC_BEFORE([$0],[AC_PROG_MKDIR_P])dnl
 AC_BEFORE([$0],[AC_PROG_INSTALL])dnl
 AC_BEFORE([$0],[AC_PROG_MAKE_SET])dnl
-AC_BEFORE([$0],[AC_PROG_LIBTOOL])dnl
+AC_BEFORE([$0],[LT_INIT])dnl
 dnl
 AC_BEFORE([$0],[LT_INIT])dnl
 AC_BEFORE([$0],[AM_INIT_AUTOMAKE])dnl
-AC_BEFORE([$0],[AC_LIBTOOL_WIN32_DLL])dnl
+AC_BEFORE([$0],[AC_REQUIRE(AC_CANONICAL_HOST)_LT_SET_OPTION([LT_INIT],[win32-dll])
+AC_DIAGNOSE([obsolete],[AC_LIBTOOL_WIN32_DLL: Remove this warning and the call to _LT_SET_OPTION when you
+put the 'win32-dll' option into LT_INIT's first parameter.])
+])dnl
 dnl
 AC_REQUIRE([_XC_CFG_PRE_PREAMBLE])dnl
 AC_REQUIRE([_XC_CFG_PRE_BASIC_CHK_CMD_ECHO])dnl
@@ -609,7 +612,7 @@ dnl direct or indirect usage of this macro happens.
 
 AC_DEFUN([XC_CHECK_PATH_SEPARATOR],
 [dnl
-AC_PREREQ([2.50])dnl
+AC_PREREQ([2.69])dnl
 dnl
 AC_BEFORE([$0],[AC_CHECK_TOOL])dnl
 AC_BEFORE([$0],[AC_CHECK_PROG])dnl
@@ -626,11 +629,14 @@ AC_BEFORE([$0],[AC_PROG_LN_S])dnl
 AC_BEFORE([$0],[AC_PROG_MKDIR_P])dnl
 AC_BEFORE([$0],[AC_PROG_INSTALL])dnl
 AC_BEFORE([$0],[AC_PROG_MAKE_SET])dnl
-AC_BEFORE([$0],[AC_PROG_LIBTOOL])dnl
+AC_BEFORE([$0],[LT_INIT])dnl
 dnl
 AC_BEFORE([$0],[LT_INIT])dnl
 AC_BEFORE([$0],[AM_INIT_AUTOMAKE])dnl
-AC_BEFORE([$0],[AC_LIBTOOL_WIN32_DLL])dnl
+AC_BEFORE([$0],[AC_REQUIRE(AC_CANONICAL_HOST)_LT_SET_OPTION([LT_INIT],[win32-dll])
+AC_DIAGNOSE([obsolete],[AC_LIBTOOL_WIN32_DLL: Remove this warning and the call to _LT_SET_OPTION when you
+put the 'win32-dll' option into LT_INIT's first parameter.])
+])dnl
 dnl
 AC_REQUIRE([XC_CONFIGURE_PREAMBLE])dnl
 dnl

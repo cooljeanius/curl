@@ -82,13 +82,13 @@ dnl LIBS, LDFLAGS, CFLAGS, CPPFLAGS and IFS from being
 dnl unexpectedly changed by underlying macros.
 
 AC_DEFUN([XC_CHECK_PROG_CC], [
-  AC_PREREQ([2.50])dnl
+  AC_PREREQ([2.69])dnl
   AC_BEFORE([$0],[_XC_PROG_CC_PREAMBLE])dnl
   AC_BEFORE([$0],[AC_PROG_INSTALL])dnl
   AC_BEFORE([$0],[AC_PROG_CC])dnl
   AC_BEFORE([$0],[AM_PROG_CC_C_O])dnl
   AC_BEFORE([$0],[AC_PROG_CPP])dnl
-  AC_BEFORE([$0],[AC_PROG_LIBTOOL])dnl
+  AC_BEFORE([$0],[LT_INIT])dnl
   AC_BEFORE([$0],[AM_INIT_AUTOMAKE])dnl
   AC_BEFORE([$0],[_XC_PROG_CC_POSTLUDE])dnl
   AC_REQUIRE([_XC_PROG_CC])dnl

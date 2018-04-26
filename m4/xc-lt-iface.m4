@@ -156,8 +156,11 @@ m4_ifdef([LT_INIT],
 [dnl
 LT_INIT([win32-dll])
 ],[dnl
-AC_LIBTOOL_WIN32_DLL
-AC_PROG_LIBTOOL
+AC_REQUIRE(AC_CANONICAL_HOST)_LT_SET_OPTION([LT_INIT],[win32-dll])
+AC_DIAGNOSE([obsolete],[AC_LIBTOOL_WIN32_DLL: Remove this warning and the call to _LT_SET_OPTION when you
+put the 'win32-dll' option into LT_INIT's first parameter.])
+
+LT_INIT
 ])dnl
 ## --------------------- ##
 ##  End of libtool code  ##
@@ -439,11 +442,14 @@ dnl   xc_lt_build_static_only
 
 AC_DEFUN([XC_LIBTOOL],
 [dnl
-AC_PREREQ([2.50])dnl
+AC_PREREQ([2.69])dnl
 dnl
 AC_BEFORE([$0],[LT_INIT])dnl
-AC_BEFORE([$0],[AC_PROG_LIBTOOL])dnl
-AC_BEFORE([$0],[AC_LIBTOOL_WIN32_DLL])dnl
+AC_BEFORE([$0],[LT_INIT])dnl
+AC_BEFORE([$0],[AC_REQUIRE(AC_CANONICAL_HOST)_LT_SET_OPTION([LT_INIT],[win32-dll])
+AC_DIAGNOSE([obsolete],[AC_LIBTOOL_WIN32_DLL: Remove this warning and the call to _LT_SET_OPTION when you
+put the 'win32-dll' option into LT_INIT's first parameter.])
+])dnl
 dnl
 AC_REQUIRE([XC_CHECK_PATH_SEPARATOR])dnl
 AC_REQUIRE([AC_CANONICAL_HOST])dnl
@@ -453,10 +459,16 @@ _XC_LIBTOOL_PREAMBLE
 _XC_LIBTOOL_BODY
 _XC_LIBTOOL_POSTLUDE
 dnl
-m4_ifdef([AC_LIBTOOL_WIN32_DLL],
-  [m4_undefine([AC_LIBTOOL_WIN32_DLL])])dnl
-m4_ifdef([AC_PROG_LIBTOOL],
-  [m4_undefine([AC_PROG_LIBTOOL])])dnl
+m4_ifdef([AC_REQUIRE(AC_CANONICAL_HOST)_LT_SET_OPTION([LT_INIT],[win32-dll])
+AC_DIAGNOSE([obsolete],[AC_LIBTOOL_WIN32_DLL: Remove this warning and the call to _LT_SET_OPTION when you
+put the 'win32-dll' option into LT_INIT's first parameter.])
+],
+  [m4_undefine([AC_REQUIRE(AC_CANONICAL_HOST)_LT_SET_OPTION([LT_INIT],[win32-dll])
+AC_DIAGNOSE([obsolete],[AC_LIBTOOL_WIN32_DLL: Remove this warning and the call to _LT_SET_OPTION when you
+put the 'win32-dll' option into LT_INIT's first parameter.])
+])])dnl
+m4_ifdef([LT_INIT],
+  [m4_undefine([LT_INIT])])dnl
 m4_ifdef([LT_INIT],
   [m4_undefine([LT_INIT])])dnl
 dnl

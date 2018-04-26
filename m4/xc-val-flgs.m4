@@ -198,7 +198,7 @@ dnl
 dnl Intended to be used early in configure script.
 
 AC_DEFUN([XC_CHECK_USER_FLAGS], [
-  AC_PREREQ([2.50])dnl
+  AC_PREREQ([2.69])dnl
   AC_BEFORE([$0],[XC_CHECK_PROG_CC])dnl
   dnl check order below matters
   _XC_CHECK_VAR_LIBS
@@ -227,7 +227,7 @@ dnl
 dnl Intended to be used very late in configure script.
 
 AC_DEFUN([XC_CHECK_BUILD_FLAGS], [
-  AC_PREREQ([2.50])dnl
+  AC_PREREQ([2.69])dnl
   dnl check order below matters
   _XC_CHECK_VAR_LIBS
   _XC_CHECK_VAR_LDFLAGS

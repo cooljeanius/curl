@@ -12,7 +12,7 @@ dnl visible to the rest of the compilation overriding
 dnl those from Autoconf.
 
 AC_DEFUN([CURL_OVERRIDE_AUTOCONF], [
-AC_BEFORE([$0],[AC_PROG_LIBTOOL])
+AC_BEFORE([$0],[LT_INIT])
 # using curl-override.m4
 ])
 
