@@ -529,6 +529,8 @@ AC_DEFUN([CURL_COMPILER_WORKS_IFELSE], [
       echo " " >&6
       echo "run-fail: test program exited with status $ac_status" >&6
       echo " " >&6
+    ],[
+      AC_MSG_ERROR([unreachable; already checked for cross-compiling])
     ])
   fi
   dnl branch upon test result

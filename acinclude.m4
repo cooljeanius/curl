@@ -2003,6 +2003,8 @@ AC_DEFUN([CURL_CHECK_LIBS_CLOCK_GETTIME_MONOTONIC], [
         AC_MSG_WARN([HAVE_CLOCK_GETTIME_MONOTONIC will not be defined])
         curl_func_clock_gettime="no"
         LIBS="$curl_cv_save_LIBS"
+      ],[
+        AC_MSG_ERROR([unreachable; already checked for cross-compiling])
       ])
     fi
     #
@@ -2469,9 +2471,9 @@ main()
 {
   return 0;
 }
-]])],[AC_MSG_RESULT(fine)],[AC_MSG_RESULT(failed)
-    AC_MSG_ERROR(one or more libs available at link-time are not available run-time. Libs used at link-time: $LIBS)
-    ],[])
+]])],[AC_MSG_RESULT([fine])],[AC_MSG_RESULT([failed])
+    AC_MSG_ERROR([one or more libs available at link-time are not available run-time. Libs used at link-time: ${LIBS}])
+    ],[:])
 
     dnl if this test fails, configure has already stopped
   fi
@@ -2921,7 +2923,7 @@ AC_DEFUN([CURL_MAC_CFLAGS], [
     AC_MSG_CHECKING([for *version-min in CFLAGS])
     min=""
     if test -z "$(echo $CFLAGS | grep m.*os.*-version-min)"; then
-      min="-mmacosx-version-min=10.8"
+      min="-mmacosx-version-min=10.6"
       CFLAGS="$CFLAGS $min"
     fi
     if test -z "$min"; then

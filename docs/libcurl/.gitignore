@@ -2,3 +2,7 @@
 *.pdf
 *.3.dist
 libcurl-symbols.3
+*.log
+*.trs
+check-easy
+check-multi

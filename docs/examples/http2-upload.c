@@ -113,7 +113,7 @@ int my_trace(CURL *handle, curl_infotype type,
              char *data, size_t size,
              void *userp)
 {
-  char timebuf[20];
+  char timebuf[48]; /* big enough for -Wformat-truncation */
   const char *text;
   int num = hnd2num(handle);
   static time_t epoch_offset;
@@ -305,7 +305,7 @@ int main(int argc, char **argv)
       if(timeout.tv_sec > 1)
         timeout.tv_sec = 1;
       else
-        timeout.tv_usec = (curl_timeo % 1000) * 1000;
+        timeout.tv_usec = (int)((curl_timeo % 1000) * 1000);
     }
 
     /* get file descriptors from the transfers */
